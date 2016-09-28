@@ -24,10 +24,6 @@
 	function clickButtonFormulaire(){
 		console.log("click sur bouton du formulaire");
 
-
-
-
-
 		// Récupérer le contenu de input1
 		var arg1 = $('#input1').val();
 		console.log("arg1 = " + arg1);
@@ -41,13 +37,12 @@
 		console.log('operation est ' + operation);
 
 
-		// Quand le formulaire est envoyé :
 		// - calculer le résultat
-		// - sélectionner l'élément html qui va contenir ce résultat
-		// - modifier cet élément avec le nouveau résultat
 		var resultat = calculer(arg1, arg2, operation);
 		console.log("Résultat est " + resultat);
 
+		// - sélectionner l'élément html qui va contenir ce résultat
+		// - modifier cet élément avec le nouveau résultat
 		$('#result').text(resultat);
 	}
 
