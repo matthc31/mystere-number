@@ -14,10 +14,6 @@
 	var valH1 = $("h1").text();
 	console.log("Mon h1 est '" + valH1 + "'.");
 
-	// Quand le formulaire est envoyé :
-	// - calculer le résultat
-	// - sélectionner l'élément html qui va contenir ce résultat
-	// - modifier cet élément avec le nouveau résultat
 
 	// Si des erreurs dans les inputs,
 	// afficher un message d'erreur
@@ -26,30 +22,78 @@
 	$("#buttonForm").click(clickButtonFormulaire);
 
 	function clickButtonFormulaire(){
-		console.log("bouton du formulaire");
+		console.log("click sur bouton du formulaire");
+
+
+
+
+
 		// Récupérer le contenu de input1
+		var arg1 = $('#input1').val();
+		console.log("arg1 = " + arg1);
 
 		// Récupérer le contenu de input2
+		var arg2 = $('#input2').val();
+		console.log("arg2 = " + arg2);
 
 		// Récupérer le contenu du select operation
+		var operation = $("#selectOperation").val();
+		console.log('operation est ' + operation);
+
+
+		// Quand le formulaire est envoyé :
+		// - calculer le résultat
+		// - sélectionner l'élément html qui va contenir ce résultat
+		// - modifier cet élément avec le nouveau résultat
+		var resultat = calculer(arg1, arg2, operation);
+		console.log("Résultat est " + resultat);
+
+		$('#result').text(resultat);
+	}
+
+	function calculer(nb1, nb2, operation){
+		var res = NaN;
+
+		if(operation == '+'){
+			res = add(nb1, nb2);
+		}else if(operation == '-'){
+			res = substract(nb1, nb2);
+		}else if(operation == '*'){
+			res = multiply(nb1, nb2);
+		}else if(operation == '/'){
+			res = divide(nb1, nb2);
+		}
+
+		return res;
 	}
 
 
-
-
 	function add(a, b){
-		
+		var nb1 = parseInt(a, 10);
+		var nb2 = parseInt(b, 10);
+		return nb1 + nb2;
 	}	
 
 	function substract(a, b){
-		
+		var nb1 = parseInt(a, 10);
+		var nb2 = parseInt(b, 10);
+		return nb1 - nb2;
 	}	
 
 	function multiply(a, b){
-		
+		var nb1 = parseInt(a, 10);
+		var nb2 = parseInt(b, 10);
+		return nb1 * nb2;
 	}	
 
 	function divide(a, b){
-		
+		var nb1 = parseInt(a, 10);
+		var nb2 = parseInt(b, 10);
+
+		if(nb2 == 0){
+			return "Division par 0 interdite !!!";
+		}
+		return nb1 / nb2;
 	}	
+
 })();
