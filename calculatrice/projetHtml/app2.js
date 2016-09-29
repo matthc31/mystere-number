@@ -25,7 +25,6 @@
 	$('#btn-2').click(function(){
 		clickNumber("2");
 	});
-
 	$('#btn-3').click(function(){
 		clickNumber("3");
 	});
@@ -51,7 +50,7 @@
 		clickNumber("0");
 	});
 
-	// Operations
+	// == Operations ==
 	$('#btn-plus').click(function(){
 		clickOperation("+");
 	});
@@ -65,18 +64,19 @@
 		clickOperation("/");
 	});
 
-	// Calculer
+
+	// == Calculer ==
 	$('#btn-calculer').click(function(){
 		clickCalculer();
 	});
-
-
 	/*
 		Comme clickCalculer n'a pas d'argument,
 		on aurait pu écrire : 
 
 		$('#btn-calculer').click(clickCalculer);
 	*/
+
+
 
 	// Fonction qui va être appelée après un click
 	// sur un bouton d'un chiffre.
