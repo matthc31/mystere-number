@@ -2,7 +2,7 @@ $(document).ready(main);
 
 // Fonction principale
 function main(){
-	
+
 	// == Fonction clickValider == 
 	// Créer la fonction 'clickValider'
 
@@ -21,7 +21,7 @@ function main(){
 
 
 	// Ecrire le code qui va détecter que le bouton 'valider' est cliqué.
-	// Et qui appelle la fonction 'clickValider'
+	// Et qui appelle la fonction 'clickValider' défini ci-dessus
 
 
 }
