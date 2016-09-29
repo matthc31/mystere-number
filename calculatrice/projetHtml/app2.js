@@ -1,3 +1,4 @@
+// Méthode 02
 "use strict";
 (function(){
 	console.log("Bienvenue dans le fichier app.js");
